@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Core Data persistence controller singleton
+    // MARK: - Core Data persistence controller singleton
     let persistenceController = PersistenceController.shared
-    
+
+    // MARK: - Body
     var body: some View {
         TabView {
+            MimiView()
+                .tabItem {
+                    Image("mimi")
+                    Text("Mimi")
+                }
             CalendarView()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Dreams")
                 }
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            MimiView()
-                .tabItem {
-                    Image("mimi")
-                    Text("Mimi")
-                }
         }
     }
 }

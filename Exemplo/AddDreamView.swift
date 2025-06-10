@@ -8,23 +8,22 @@
 import SwiftUI
 
 struct AddDreamView: View {
-    // Core Data context
+    // MARK: - Environment
     @Environment(\.managedObjectContext) private var viewContext
-    // Dismiss control
     @Environment(\.dismiss) private var dismiss
     
-    // Public properties
+    // MARK: - Public properties
     var selectedDate: Date
     var dreamToEdit: Item?
+    var onDreamSaved: (() -> Void)? = nil
     
-    // Form states
+    // MARK: - State
     @State private var title: String
     @State private var dreamText: String
     @State private var date: Date
     @State private var dreamType: DreamType = .normal
     
-    var onDreamSaved: (() -> Void)? = nil
-    
+    // MARK: - DreamType enum
     enum DreamType: String, CaseIterable, Identifiable {
         case normal = "Confort😃"
         case nightmare = "Nightmare🙁"
@@ -44,33 +43,40 @@ struct AddDreamView: View {
         _dreamType = State(initialValue: DreamType(rawValue: dreamToEdit?.type ?? "") ?? .normal)
     }
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Dream date").font(.system(size: 15, weight: .bold))
-                    .foregroundStyle(Color("Highlight")) ) {
+                Section(header: Text("Dream date")
+                    .font(.system(size: 15, weight: .bold))
+                    .foregroundStyle(Color("Highlight"))) {
                         DatePicker("", selection: $date, displayedComponents: .date)
                             .datePickerStyle(.compact)
                     }
-                Section(header: Text("Title").font(.system(size: 15 , weight: .bold))
-                    .foregroundStyle(Color("Highlight")) ){
-                    TextField("Dream title", text: $title)
-                }
-                Section(header: Text("Description").font(.system(size: 15 , weight: .bold))
-                    .foregroundStyle(Color("Highlight")) ) {
-                    TextEditor(text: $dreamText)
-                        .frame(height: 200)
-                }
                 
-                Section(header: Text("Type") .font(.system(size: 15 , weight: .bold))
-                    .foregroundStyle(Color("Highlight")) ) {
-                    Picker("Type", selection: $dreamType) {
-                        ForEach(DreamType.allCases) { type in
-                            Text(type.rawValue).tag(type)
-                        }
+                Section(header: Text("Title")
+                    .font(.system(size: 15, weight: .bold))
+                    .foregroundStyle(Color("Highlight"))) {
+                        TextField("Dream title", text: $title)
                     }
-                    .pickerStyle(.menu)
-                }
+                
+                Section(header: Text("Description")
+                    .font(.system(size: 15, weight: .bold))
+                    .foregroundStyle(Color("Highlight"))) {
+                        TextEditor(text: $dreamText)
+                            .frame(height: 200)
+                    }
+                
+                Section(header: Text("Type")
+                    .font(.system(size: 15, weight: .bold))
+                    .foregroundStyle(Color("Highlight"))) {
+                        Picker("Type", selection: $dreamType) {
+                            ForEach(DreamType.allCases) { type in
+                                Text(type.rawValue).tag(type)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                    }
             }
             .background(Color("Background"))
             .navigationTitle(dreamToEdit == nil ? "New Dream" : "Edit Dream")
@@ -99,18 +105,19 @@ struct AddDreamView: View {
             }
         }
     }
+    
     // MARK: - Private methods
     private func saveDream() {
         let dream = dreamToEdit ?? Item(context: viewContext)
         dream.title = title
         dream.dreamText = dreamText
         dream.timestamp = date
-        dream.setValue(dreamType.rawValue, forKey: "type") // Save type as string
+        dream.setValue(dreamType.rawValue, forKey: "type")
         do {
             try viewContext.save()
-            onDreamSaved?() // Notify when a dream is saved
+            onDreamSaved?()
         } catch {
-            print("Erro ao salvar sonho: \(error.localizedDescription)")
+            print("Error saving dream: \(error.localizedDescription)")
         }
     }
     

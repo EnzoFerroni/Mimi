@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ExemploApp: App {
-    // Core Data persistence controller singleton
+    // MARK: - Core Data persistence controller singleton
     let persistenceController = PersistenceController.shared
     @State private var selectedTab = 0
 
@@ -25,21 +25,18 @@ struct RootTabView: View {
     @Binding var selectedTab: Int
     var body: some View {
         TabView(selection: $selectedTab) {
-            CalendarView(onDreamAdded: {
-                NotificationCenter.default.post(name: .dreamAdded, object: nil)
-                selectedTab = 1 // Go to Mimi tab
-            })
+            MimiView()
+                .tabItem {
+                    Image("mimi")
+                    Text("Mimi")
+                }
+                .tag(0)
+            CalendarView()
             .tabItem {
                 Image(systemName: "calendar")
                 Text("Dreams")
             }
-            .tag(0)
-            MimiView()
-                .tabItem {
-                    Image(systemName: "face.smiling")
-                    Text("Mimi")
-                }
-                .tag(1)
+            .tag(1)
         }
     }
 }

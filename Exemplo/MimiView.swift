@@ -5,7 +5,6 @@ struct MimiView: View {
     @State private var showCookie: Bool = false // Controls if the cookie is visible
     @State private var cookieOffset: CGFloat = 0 // Controls the cookie animation
     @State private var cookieEaten: Bool = false // Controls if the cookie was "eaten"
-    @State private var observer: NSObjectProtocol? // Holds the notification observer
 
     var body: some View {
         VStack {
@@ -53,23 +52,8 @@ struct MimiView: View {
             .padding(.bottom, 40)
         }
         .navigationTitle("Mimi")
-        .onAppear {
-            observer = NotificationCenter.default.addObserver(forName: .dreamAdded, object: nil, queue: .main) { _ in
-                showCookie = true
-                cookieEaten = false
-                cookieOffset = 0
-            }
-        }
-        .onDisappear {
-            if let observer = observer {
-                NotificationCenter.default.removeObserver(observer)
-            }
-        }
-    }
-}
 
-extension Notification.Name {
-    static let dreamAdded = Notification.Name("dreamAdded")
+    }
 }
 
 #Preview {

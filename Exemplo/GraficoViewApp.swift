@@ -1,15 +1,15 @@
 import SwiftUI
 import Charts
-
+import CoreData
 
 struct PostCount {
     var category: String
     var count: Int
 }
 
-
 struct PieChartView: View {
     @State private var selectedAngle: Double?
+    var data: [PostCount]
     
     var selectedItem: PostCount? {
         guard let selectedAngle else { return nil }
@@ -30,17 +30,12 @@ struct PieChartView: View {
         }
     }
     
-    let data: [PostCount] = [
-        .init(category: "Confort😃", count: 73),
-        .init(category: "Nightmare🙁", count: 79),
-        .init(category: "Lucid😐", count: 58),
-        .init(category: "Symbolic💭", count: 15)]
-    
     private let categoryRanges: [(category: String, range: Range<Double>)]
     private let totalPosts: Int
     
-    init() {
+    init(data: [PostCount]) {
         var total = 0
+        self.data = data
         categoryRanges = data.map {
             let newTotal = total + $0.count
             let result = (category: $0.category,
@@ -52,7 +47,6 @@ struct PieChartView: View {
     }
     
     var body: some View {
-        
         Chart(data, id: \.category) { item in
             SectorMark(
                 angle: .value("Count", item.count),
@@ -81,5 +75,9 @@ struct PieChartView: View {
 }
 
 #Preview{
-    PieChartView()
+    PieChartView(data: [
+        .init(category: "Confort😃", count: 73),
+        .init(category: "Nightmare🙁", count: 79),
+        .init(category: "Lucid😐", count: 58),
+        .init(category: "Symbolic💭", count: 15)])
 }

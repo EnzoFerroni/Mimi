@@ -30,10 +30,24 @@
       }
     },
     "Category" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoria"
+          }
+        }
+      }
     },
     "Count" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quantidade"
+          }
+        }
+      }
     },
     "Date" : {
       "extractionState" : "manual",
@@ -151,6 +165,12 @@
         }
       }
     },
+    "No Data" : {
+
+    },
+    "No data to display." : {
+
+    },
     "No dreams for this day." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -173,6 +193,9 @@
         }
       }
     },
+    "OK" : {
+
+    },
     "Save" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -194,7 +217,7 @@
         }
       }
     },
-    "Sonhos" : {
+    "There are no dreams to display in the chart." : {
 
     },
     "Title" : {
@@ -209,7 +232,14 @@
       }
     },
     "Type" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

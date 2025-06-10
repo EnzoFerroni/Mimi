@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CalendarView.swift
 //  Exemplo
 //
 //  Created by Enzo Ferroni on 04/06/25.
@@ -8,29 +8,102 @@
 import SwiftUI
 import CoreData
 
-
 struct CalendarView: View {
-    // Core Data context for persistence
+    // MARK: - Environment
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: false)],
         animation: .default)
     private var items: FetchedResults<Item>
     
-    // MARK: - UI State
-    @State private var selectedDate = Date() // Selected date in the calendar
-    @State private var showAddDream = false  // Controls the add dream sheet
-    @State private var editDream: Item? = nil // Dream to be edited
-    
-    
-    // Callback to notify when a dream is added
-    var onDreamAdded: (() -> Void)? = nil
-    
+    // MARK: - State
+    @State private var selectedDate = Date()
+    @State private var showAddDream = false
+    @State private var editDream: Item? = nil
+    @State private var dreamCounts: [PostCount] = []
+        
     // MARK: - Filtered dreams for the selected date
     private var dreamsForSelectedDate: [Item] {
         items.filter { item in
             guard let date = item.timestamp else { return false }
             return Calendar.current.isDate(date, inSameDayAs: selectedDate)
+        }
+    }
+    
+    // MARK: - Body
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 16) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundStyle(Color("SecondaryColor"))
+                            .opacity(0.2)
+                            .frame(maxWidth: .infinity, minHeight: 400, maxHeight: 400)
+                        DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
+                            .datePickerStyle(.graphical)
+                            .padding(.horizontal)
+                            .colorScheme(.dark)
+                    }
+                    
+                    if dreamsForSelectedDate.isEmpty {
+                        Text("No dreams for this day.")
+                            .foregroundColor(.secondary)
+                            .padding()
+                    } else {
+                        // Dreams grid
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(dreamsForSelectedDate) { dream in
+                                    Button {
+                                        editDream = dream
+                                    } label: {
+                                        DreamCardView(dream: dream)
+                                            .frame(width: 200, height: 100)
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                            }
+                            .padding(.horizontal, 8)
+                        }
+                    }
+                    
+                    // Pie chart below dream cards
+                    PieChartView(data: dreamCounts)
+                        .frame(height: 400)
+                    
+                    Spacer()
+                }
+            }
+            .background(Color("Background"))
+            .navigationTitle("Dreams")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showAddDream = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showAddDream, onDismiss: fetchDreamCounts) {
+                AddDreamView(selectedDate: selectedDate, onDreamSaved: {
+                    fetchDreamCounts()
+                })
+                .environment(\.managedObjectContext, viewContext)
+            }
+            .sheet(item: $editDream, onDismiss: {
+                self.selectedDate = self.selectedDate
+                self.editDream = nil
+                fetchDreamCounts()
+            }) { editDream in
+                AddDreamView(selectedDate: editDream.timestamp ?? Date(), dreamToEdit: editDream, onDreamSaved: {
+                    fetchDreamCounts()
+                })
+                .environment(\.managedObjectContext, viewContext)
+            }
+            .onAppear(perform: fetchDreamCounts)
+            .onChange(of: items.map(\.objectID)) { fetchDreamCounts() }
         }
     }
     
@@ -46,74 +119,28 @@ struct CalendarView: View {
         }
     }
     
-    var body: some View {
-        NavigationStack {
-            ScrollView(){
-                VStack(spacing: 16) {
-                    ZStack(){
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundStyle(Color("SecondaryColor"))
-                            .opacity(0.2)
-                            .frame(width: .infinity , height: 400)
-                        DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
-                            .datePickerStyle(.graphical)
-                            .padding(.horizontal)
-                        .colorScheme(.dark)                    }
-                    if dreamsForSelectedDate.isEmpty {
-                        Text("No dreams for this day.")
-                            .foregroundColor(.secondary)
-                            .padding()
-                    } else {
-                        // Dreams grid
-                        ScrollView(.horizontal , showsIndicators: false) {
-                            HStack {
-                                ForEach(dreamsForSelectedDate) { dream in
-                                    // Open edit sheet when tapping a card
-                                    Button {
-                                        editDream = dream
-                                    } label: {
-                                        DreamCardView(dream: dream)
-                                            .frame(width: 200, height: 100)
-                                    }
-                                    .buttonStyle(.plain)
-                                }
-                            }
-                            .padding(.horizontal, 8)}
-                    }
-                    Spacer()
-                }
-            }
-                .background(Color("Background"))
-                .navigationTitle("Sonhos")
-                .toolbar {
-                    // Add dream button in the navigation bar
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            showAddDream = true
-                        } label: {
-                            Image(systemName: "plus")
-                        }
-                    }
-                }
-                // Sheet to add a new dream
-                .sheet(isPresented: $showAddDream) {
-                    AddDreamView(selectedDate: selectedDate, onDreamSaved: {
-                        onDreamAdded?()
-                    })
-                    .environment(\.managedObjectContext, viewContext)
-                }
-                // Sheet to edit a dream
-                .sheet(item: $editDream, onDismiss: {
-                    self.selectedDate = self.selectedDate
-                    self.editDream = nil
-                }) { editDream in
-                    AddDreamView(selectedDate: editDream.timestamp ?? Date(), dreamToEdit: editDream)
-                        .environment(\.managedObjectContext, viewContext)
-                }
+    // MARK: - Fetch dream counts by type
+    private func fetchDreamCounts() {
+        let categories = [
+            "Confort😃",
+            "Nightmare🙁",
+            "Lucid😐",
+            "Symbolic💭"
+        ]
+        var counts: [PostCount] = []
+        for category in categories {
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+            request.predicate = NSPredicate(format: "type == %@", category)
+            do {
+                let count = try viewContext.count(for: request)
+                counts.append(PostCount(category: category, count: count))
+            } catch {
+                counts.append(PostCount(category: category, count: 0))
             }
         }
+        dreamCounts = counts
     }
-
+}
 
 #Preview {
     CalendarView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
