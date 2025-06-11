@@ -15,9 +15,6 @@
         }
       }
     },
-    "🍪" : {
-
-    },
     "Cancel" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -133,6 +130,9 @@
         }
       }
     },
+    "generate a cookie" : {
+
+    },
     "Key" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -165,12 +165,6 @@
         }
       }
     },
-    "No Data" : {
-
-    },
-    "No data to display." : {
-
-    },
     "No dreams for this day." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -193,9 +187,6 @@
         }
       }
     },
-    "OK" : {
-
-    },
     "Save" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -208,6 +199,7 @@
       }
     },
     "Simulate new dream (show cookie)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-BR" : {
           "stringUnit" : {
@@ -216,9 +208,6 @@
           }
         }
       }
-    },
-    "There are no dreams to display in the chart." : {
-
     },
     "Title" : {
       "extractionState" : "manual",
