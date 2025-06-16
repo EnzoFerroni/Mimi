@@ -42,7 +42,11 @@ struct CalendarView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundStyle(Color("SecondaryColor"))
                             .opacity(0.2)
+<<<<<<< HEAD
                             .frame(width: .infinity, height: 380)
+=======
+                            .frame(width: 390, height: 380)
+>>>>>>> 85664c290ba0463b72ae648d6a7c010bbdcfe4c9
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(.black, lineWidth: 1)
