@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Comendo26" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 235.73 259.51">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-width: .1px;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7 {
+        stroke-linecap: round;
+      }
+
+      .st0, .st2, .st3, .st4, .st5, .st6, .st7 {
+        fill: none;
+        stroke: #af79ba;
+      }
+
+      .st1 {
+        fill: #593239;
+        stroke: #593239;
+      }
+
+      .st1, .st2 {
+        stroke-width: 2.39px;
+      }
+
+      .st8 {
+        fill: #eeb4fa;
+      }
+
+      .st9 {
+        fill: #e69df5;
+      }
+
+      .st10 {
+        fill: #d9d9d9;
+      }
+
+      .st11 {
+        fill: #bc83c8;
+      }
+
+      .st12 {
+        fill: #bd92c5;
+      }
+
+      .st3 {
+        stroke-width: .6px;
+      }
+
+      .st4 {
+        stroke-width: .3px;
+      }
+
+      .st5 {
+        stroke-width: .2px;
+      }
+
+      .st6 {
+        stroke-width: 1.5px;
+      }
+
+      .st7 {
+        stroke-width: .8px;
+      }
+
+      .st13 {
+        fill: #7264a6;
+      }
+    </style>
+  </defs>
+  <path class="st13" d="M204.75,122.84c3.33,5.58,11,17.28-7.07,13.36l-106.08-12.51,29.38-62.31c2.71-5.12,23.39-14.88,26.03-10.46l57.75,71.91h-.01Z"/>
+  <ellipse class="st13" cx="214.5" cy="136.99" rx="15.49" ry="17.44" transform="translate(-33.42 79.44) rotate(-19.49)"/>
+  <g>
+    <rect class="st8" x="24.32" y="55.94" width="166.78" height="182.86" rx="83.39" ry="83.39"/>
+    <ellipse class="st12" cx="75.01" cy="147.03" rx="16.59" ry="18.23"/>
+    <ellipse cx="75.01" cy="141.33" rx="16.59" ry="18.23"/>
+    <ellipse class="st10" cx="79.45" cy="131.51" rx="4.2" ry="3.81"/>
+    <ellipse class="st12" cx="139.75" cy="147.03" rx="16.59" ry="18.23"/>
+    <ellipse cx="139.75" cy="141.33" rx="16.59" ry="18.23"/>
+    <ellipse class="st10" cx="145.17" cy="132.27" rx="4.2" ry="3.81"/>
+    <path class="st8" d="M127.53,122.79c.21-3.37,1.93-6.52,4.78-8.77,2.85-2.25,6.6-3.4,10.43-3.21,3.82.19,7.41,1.72,9.96,4.24,2.56,2.52,3.87,5.83,3.66,9.19l-14.42-.73-14.42-.73Z"/>
+    <path class="st8" d="M89.68,122.79c-.21-3.37-1.93-6.52-4.78-8.77-2.85-2.25-6.6-3.4-10.43-3.2-3.82.19-7.41,1.72-9.96,4.23-2.56,2.52-3.87,5.83-3.66,9.19l14.42-.73,14.42-.73Z"/>
+    <path class="st1" d="M96.39,167.26c4.88.22,15.55,0,22.22,0,3.34,0-5.19,4.34-11.15,3.93-5.82.36-13.06-4.02-11.07-3.93Z"/>
+    <path class="st6" d="M94.9,166.53c6.2-1.38,21.05-.98,25.5,0"/>
+    <path class="st6" d="M94.53,167.27c7.53,8.42,21.67,5.62,26.25,0"/>
+    <ellipse class="st11" cx="58.43" cy="162.24" rx="4.77" ry="8.38" transform="translate(-108.04 207.21) rotate(-85.31)"/>
+    <ellipse class="st11" cx="107.71" cy="153.87" rx="5.19" ry="2.39"/>
+    <ellipse class="st11" cx="156.39" cy="162.24" rx="8.38" ry="4.77" transform="translate(-14.17 14.97) rotate(-5.24)"/>
+    <path class="st2" d="M132.85,105.58c4.26-1.44,9.22-.6,11.17,0"/>
+    <ellipse class="st9" cx="73.34" cy="237.34" rx="24.84" ry="9.9"/>
+    <ellipse class="st9" cx="148.99" cy="237.34" rx="24.84" ry="9.9"/>
+    <path class="st2" d="M69.01,105.58c4.56-1.44,9.88-.6,11.97,0"/>
+  </g>
+  <path class="st13" d="M34.51,101.81c-2.62.09,15.12-36.86,34.76-51.85,21.72-16.59,45.04-18.1,63.84-13.34,20.12,5.09,53.17,65.13,50.26,65.39"/>
+  <path class="st7" d="M153.45,54.37s20.72,24.21,29.93,47.65"/>
+  <path class="st3" d="M152.36,52.71l1.09,1.66"/>
+  <path class="st5" d="M151.4,51l.5.93"/>
+  <path class="st4" d="M151.72,51.64l.79,1.33"/>
+  <path class="st0" d="M151.08,50.5l.48.76"/>
+</svg>

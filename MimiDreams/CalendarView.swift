@@ -21,6 +21,9 @@ struct CalendarView: View {
     @State private var showAddDream = false
     @State private var editDream: Item? = nil
     @State private var dreamCounts: [PostCount] = []
+    @Binding public var showCookie: Bool
+    @Binding public var cookieEaten: Bool
+    @Binding public var cookieOffset: CGFloat
         
     // MARK: - Filtered dreams for the selected date
     private var dreamsForSelectedDate: [Item] {
@@ -42,11 +45,8 @@ struct CalendarView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundStyle(Color("SecondaryColor"))
                             .opacity(0.2)
-<<<<<<< HEAD
+                            
                             .frame(width: .infinity, height: 380)
-=======
-                            .frame(width: 390, height: 380)
->>>>>>> 85664c290ba0463b72ae648d6a7c010bbdcfe4c9
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(.black, lineWidth: 1)
@@ -101,6 +101,9 @@ struct CalendarView: View {
             .sheet(isPresented: $showAddDream, onDismiss: fetchDreamCounts) {
                 AddDreamView(selectedDate: selectedDate, onDreamSaved: {
                     fetchDreamCounts()
+                    showCookie = true
+                    cookieEaten = false
+                    cookieOffset = 0
                 })
                 .environment(\.managedObjectContext, viewContext)
             }
@@ -154,6 +157,6 @@ struct CalendarView: View {
     }
 }
 
-#Preview {
-    CalendarView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-}
+//#Preview {
+//    CalendarView(showCookie: .constant(true)).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//}

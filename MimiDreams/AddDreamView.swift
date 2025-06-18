@@ -25,7 +25,7 @@ struct AddDreamView: View {
     
     // MARK: - DreamType enum
     enum DreamType: String, CaseIterable, Identifiable {
-        case normal = "Confort😃"
+        case normal = "Comfort😃"
         case nightmare = "Nightmare🙁"
         case lucid =  "Lucid😐"
         case symbolic = "Symbolic💭"
