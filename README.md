@@ -109,9 +109,9 @@ Then hit **⌘R** in Xcode to build and run. No external dependencies — it jus
 
 Built with care by:
 
-- **Enzo Ferroni** — [@EnzoFerroni](https://github.com/EnzoFerroni)
-- **Lucca Pivoto**
-- **Alana Abdias**
+- **Alana Abdias** — [GitHub](https://github.com/Alana-Abdias) · [LinkedIn](https://www.linkedin.com/in/alana-abdias-de-oliveira-macedo-585b11359/)
+- **Enzo Ferroni** — [GitHub](https://github.com/EnzoFerroni) · [LinkedIn](https://www.linkedin.com/in/enzoferroni/)
+- **Lucca Pivoto** — [GitHub](https://github.com/LuccaPV) · [LinkedIn](https://www.linkedin.com/in/luccapivoto/)
 
 ---
 
