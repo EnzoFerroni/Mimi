@@ -4,7 +4,7 @@
 
 # MimiDreams
 
-<img src="MimiDreams/Assets.xcassets/Mimi.imageset/mimi.parado.svg" width="120" alt="Mimi mascot"/>
+<img src="docs/mimi-eating.gif" width="150" alt="Mimi eating a cookie"/>
 
 ### Your cozy dream journal, guarded by a sleepy little companion. 🌙
 
