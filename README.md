@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="MimiDreams/Assets.xcassets/Mimi.imageset/mimi.parado.svg" width="160" alt="Mimi mascot"/>
+<img src="docs/icon.png" width="140" alt="MimiDreams app icon" style="border-radius: 28px;"/>
 
 # MimiDreams
+
+<img src="MimiDreams/Assets.xcassets/Mimi.imageset/mimi.parado.svg" width="120" alt="Mimi mascot"/>
 
 ### Your cozy dream journal, guarded by a sleepy little companion. 🌙
 
@@ -52,8 +54,6 @@ frame-by-frame animated mascot that nibbles a cookie as a little thank-you. 🍪
 ---
 
 ## 📱 Screenshots
-
-> _Adicione as capturas em `docs/screenshots/` e elas aparecem aqui._
 
 | Mimi | Calendar | Add Dream | Insights |
 |:---:|:---:|:---:|:---:|
@@ -109,15 +109,40 @@ Then hit **⌘R** in Xcode to build and run. No external dependencies — it jus
 
 Built with care by:
 
-- **Alana Abdias** — [GitHub](https://github.com/Alana-Abdias) · [LinkedIn](https://www.linkedin.com/in/alana-abdias-de-oliveira-macedo-585b11359/)
-- **Enzo Ferroni** — [GitHub](https://github.com/EnzoFerroni) · [LinkedIn](https://www.linkedin.com/in/enzoferroni/)
-- **Lucca Pivoto** — [GitHub](https://github.com/LuccaPV) · [LinkedIn](https://www.linkedin.com/in/luccapivoto/)
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/Alana-Abdias">
+        <img src="https://github.com/Alana-Abdias.png" width="100" style="border-radius:50%" alt="Alana Abdias"/>
+      </a>
+      <br/><sub><b>Alana Abdias</b></sub><br/><br/>
+      <a href="https://github.com/Alana-Abdias"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/alana-abdias-de-oliveira-macedo-585b11359/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/EnzoFerroni">
+        <img src="https://github.com/EnzoFerroni.png" width="100" style="border-radius:50%" alt="Enzo Ferroni"/>
+      </a>
+      <br/><sub><b>Enzo Ferroni</b></sub><br/><br/>
+      <a href="https://github.com/EnzoFerroni"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/enzoferroni/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/LuccaPV">
+        <img src="https://github.com/LuccaPV.png" width="100" style="border-radius:50%" alt="Lucca Pivoto"/>
+      </a>
+      <br/><sub><b>Lucca Pivoto</b></sub><br/><br/>
+      <a href="https://github.com/LuccaPV"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/luccapivoto/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE). © 2025 Enzo Ferroni, Lucca Pivoto and Alana Abdias.
+Released under the [MIT License](LICENSE). © 2025 Alana Abdias, Enzo Ferroni and Lucca Pivoto.
 
 <div align="center">
 <br/>
