@@ -4,8 +4,6 @@
 
 # MimiDreams
 
-<img src="docs/mimi-eating.gif" width="150" alt="Mimi eating a cookie"/>
-
 ### Your cozy dream journal, guarded by a sleepy little companion. 🌙
 
 Write down your dreams, watch them bloom on a calendar, and feed **Mimi** —
