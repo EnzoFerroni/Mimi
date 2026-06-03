@@ -13,11 +13,11 @@ your pixel companion who happily munches a cookie every time you log a new dream
 
 <br/>
 
-[![Platform](https://img.shields.io/badge/platform-iOS%2018.5+-000000?style=flat-square&logo=apple)](https://www.apple.com/ios/)
-[![Swift](https://img.shields.io/badge/Swift-5.0-FA7343?style=flat-square&logo=swift&logoColor=white)](https://swift.org)
-[![SwiftUI](https://img.shields.io/badge/SwiftUI-0080FF?style=flat-square&logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
-[![Core Data](https://img.shields.io/badge/Core%20Data-1575F9?style=flat-square&logo=apple&logoColor=white)](https://developer.apple.com/documentation/coredata)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-iOS%2018.5+-000000?style=for-the-badge&logo=apple)](https://www.apple.com/ios/)
+[![Swift](https://img.shields.io/badge/Swift-5.0-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org)
+[![SwiftUI](https://img.shields.io/badge/SwiftUI-0080FF?style=for-the-badge&logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
+[![Core Data](https://img.shields.io/badge/Core%20Data-1575F9?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/documentation/coredata)
+[![License](https://img.shields.io/badge/License-MIT-3DA639?style=for-the-badge)](LICENSE)
 
 <br/>
 
@@ -34,7 +34,7 @@ your pixel companion who happily munches a cookie every time you log a new dream
 - [About](#-about)
 - [Features](#-features)
 - [Screenshots](#-screenshots)
-- [Tech Stack](#️-tech-stack)
+- [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
 - [Team](#-team)
@@ -147,8 +147,8 @@ Built with care by:
     <td align="center" width="25%">
       <img src="docs/mimi-eating.gif" width="90" alt="Mimi"/>
       <br/><sub><b>Mimi</b></sub><br/><br/>
-      <img src="https://img.shields.io/badge/Role-Mascot-FFB6C1?style=flat-square" alt="Mascot"/>
-      <img src="https://img.shields.io/badge/Cookies-%E2%88%9E-D2691E?style=flat-square" alt="Cookies: infinite"/>
+      <img src="https://img.shields.io/badge/Role-Mascot-FFB6C1?style=for-the-badge" alt="Mascot"/>
+      <img src="https://img.shields.io/badge/Cookies-%E2%88%9E-D2691E?style=for-the-badge" alt="Cookies: infinite"/>
     </td>
   </tr>
 </table>
