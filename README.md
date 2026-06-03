@@ -116,24 +116,24 @@ Built with care by:
         <img src="https://github.com/Alana-Abdias.png" width="100" style="border-radius:50%" alt="Alana Abdias"/>
       </a>
       <br/><sub><b>Alana Abdias</b></sub><br/><br/>
-      <a href="https://github.com/Alana-Abdias"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/alana-abdias-de-oliveira-macedo-585b11359/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+      <a href="https://github.com/Alana-Abdias"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/alana-abdias-de-oliveira-macedo-585b11359/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
     </td>
     <td align="center" width="33%">
       <a href="https://github.com/EnzoFerroni">
         <img src="https://github.com/EnzoFerroni.png" width="100" style="border-radius:50%" alt="Enzo Ferroni"/>
       </a>
       <br/><sub><b>Enzo Ferroni</b></sub><br/><br/>
-      <a href="https://github.com/EnzoFerroni"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/enzoferroni/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+      <a href="https://github.com/EnzoFerroni"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/enzoferroni/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
     </td>
     <td align="center" width="33%">
       <a href="https://github.com/LuccaPV">
         <img src="https://github.com/LuccaPV.png" width="100" style="border-radius:50%" alt="Lucca Pivoto"/>
       </a>
       <br/><sub><b>Lucca Pivoto</b></sub><br/><br/>
-      <a href="https://github.com/LuccaPV"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/luccapivoto/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+      <a href="https://github.com/LuccaPV"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/luccapivoto/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
     </td>
   </tr>
 </table>
