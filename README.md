@@ -29,6 +29,19 @@ your pixel companion who happily munches a cookie every time you log a new dream
 
 ---
 
+## 📑 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Tech Stack](#️-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Team](#-team)
+- [License](#-license)
+
+---
+
 ## ✨ About
 
 **MimiDreams** is a SwiftUI iOS app that turns dream journaling into a small daily
@@ -107,36 +120,40 @@ Then hit **⌘R** in Xcode to build and run. No external dependencies — it jus
 
 ## 👥 Team
 
+<div align="center">
+
 Built with care by:
 
 <table>
   <tr>
-    <td align="center" width="33%">
-      <a href="https://github.com/Alana-Abdias">
-        <img src="https://github.com/Alana-Abdias.png" width="100" style="border-radius:50%" alt="Alana Abdias"/>
-      </a>
+    <td align="center" width="25%">
+      <a href="https://github.com/Alana-Abdias"><img src="https://github.com/Alana-Abdias.png" width="100" alt="Alana Abdias"/></a>
       <br/><sub><b>Alana Abdias</b></sub><br/><br/>
       <a href="https://github.com/Alana-Abdias"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
       <a href="https://www.linkedin.com/in/alana-abdias-de-oliveira-macedo-585b11359/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
     </td>
-    <td align="center" width="33%">
-      <a href="https://github.com/EnzoFerroni">
-        <img src="https://github.com/EnzoFerroni.png" width="100" style="border-radius:50%" alt="Enzo Ferroni"/>
-      </a>
+    <td align="center" width="25%">
+      <a href="https://github.com/EnzoFerroni"><img src="https://github.com/EnzoFerroni.png" width="100" alt="Enzo Ferroni"/></a>
       <br/><sub><b>Enzo Ferroni</b></sub><br/><br/>
       <a href="https://github.com/EnzoFerroni"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
       <a href="https://www.linkedin.com/in/enzoferroni/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
     </td>
-    <td align="center" width="33%">
-      <a href="https://github.com/LuccaPV">
-        <img src="https://github.com/LuccaPV.png" width="100" style="border-radius:50%" alt="Lucca Pivoto"/>
-      </a>
+    <td align="center" width="25%">
+      <a href="https://github.com/LuccaPV"><img src="https://github.com/LuccaPV.png" width="100" alt="Lucca Pivoto"/></a>
       <br/><sub><b>Lucca Pivoto</b></sub><br/><br/>
       <a href="https://github.com/LuccaPV"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
       <a href="https://www.linkedin.com/in/luccapivoto/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
     </td>
+    <td align="center" width="25%">
+      <img src="docs/mimi-eating.gif" width="90" alt="Mimi"/>
+      <br/><sub><b>Mimi</b></sub><br/><br/>
+      <img src="https://img.shields.io/badge/Role-Mascot-FFB6C1?style=flat-square" alt="Mascot"/>
+      <img src="https://img.shields.io/badge/Cookies-%E2%88%9E-D2691E?style=flat-square" alt="Cookies: infinite"/>
+    </td>
   </tr>
 </table>
+
+</div>
 
 ---
 
